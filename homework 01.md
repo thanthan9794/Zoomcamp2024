@@ -54,4 +54,3 @@ Answer: select zdo."Zone" from green_taxi_trips t, zones zpu, zones zdo where t.
  ."DOLocationID"=zdo."LocationID" and TO_CHAR(t.lpep_pickup_datetime,'YYYY-MM')='2019-09' and zpu."Zone"='Astoria' and t.tip_amount >
  = (select max(t.tip_amount) from green_taxi_trips t, zones zpu where t."PULocationID"=zpu."LocationID" and TO_CHAR(t.lpep_pickup_dat
  etime,'YYYY-MM')='2019-09' and zpu."Zone"='Astoria')
-
